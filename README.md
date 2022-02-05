@@ -1,10 +1,18 @@
-# Getting Started with Create React App
+# Project description
+Platform that help give away staff you do not need anymore to those who can use them
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Technologies used
+React, Material UI, Sass, HTML , Firebase;
 
-## Available Scripts
+### Live Demo
 
-In the project directory, you can run:
+# License
+MIT License
+
+# Next steps
+xxx
+
+
 
 ### `npm start`
 
