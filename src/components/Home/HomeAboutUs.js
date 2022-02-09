@@ -3,7 +3,7 @@ import React from 'react';
 
 const HomeAboutUs = () => {
     return (
-        <div>
+        <div id="about">
             AboutUs
         </div>
     );

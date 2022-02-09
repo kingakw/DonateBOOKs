@@ -1,28 +1,28 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import Login from "../Login";
 import Register from "../Register";
-import * as Scroll from 'react-scroll';
-import { Link as scroll} from 'react-scroll';
+import { Link } from 'react-scroll';
+import HomeFourSteps from "./HomeFourSteps";
 
 const HomeHeader = () => {
     return (
         <div className="headerMenu__header">
             <nav className="headerMenu__Nav">
-                <Link className="headerMenu__Nav__el" to="/Login" element={<Login/>}>
+                <NavLink className="headerMenu__Nav__el" to="/Login" element={<Login/>}>
                     Zaloguj
-                </Link>
-                <Link className="headerMenu__Nav__el" to="/Register" element={<Register/>}>
+                </NavLink>
+                <NavLink className="headerMenu__Nav__el" to="/Register" element={<Register/>}>
                     Załóż konto
-                </Link>
+                </NavLink>
             </nav>
 
             <ul className="headerMenu__Menu">
-                <li> Start</li>
-                <li> O co chodzi?</li>
-                <li> O nas</li>
-                <li> Fundacja i organizacje</li>
-                <li> O nas</li>
+                <li> Start  </li>
+                <li> <Link to ="fourSteps" smooth={true} > O co chodzi? </Link> </li>
+                <li> <Link to ="about" smooth={true} > O nas </Link> </li>
+                <li> <Link to ="help" smooth={true} > Fundacja i organizacje </Link> </li>
+                <li> <Link to ="contact" smooth={true} > Kontakt </Link> </li>
             </ul>
         </div>
     );

@@ -10,7 +10,7 @@ import Login from "../Login";
 
 const HomeFourSteps = () => {
     return (
-        <div className="stepContainer">
+        <div className="stepContainer" id="fourSteps">
             <p> Wystarczą 4 proste kroki </p>
             <div className="stepContainer__decor">
                 <img src={Decoration} alt="decoration"/>

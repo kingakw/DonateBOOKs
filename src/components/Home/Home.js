@@ -5,7 +5,7 @@ import HomeThreeColumns from "./HomeThreeColums";
 import HomeFourSteps from "./HomeFourSteps";
 import HomeAboutUs from "./HomeAboutUs";
 import HomeHelp from "./HomeHelp";
-import HomeContact from "./HomeHContact";
+import HomeContact from "./HomeContact";
 import HomeFooter from "./HomeFooter";
 import HomeHeader from "./HomeHeader";
 
