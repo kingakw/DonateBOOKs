@@ -1,0 +1,19 @@
+.aboutContainer {
+  width: 100%;
+  height: 935px;
+  display: flex;
+  background-color: $light-gray;
+
+  .aboutContainer__info {
+    width: 50%;
+    height: 100%;
+  }
+
+  .aboutContainer__img{
+    width: 50%;
+    height: 100%;
+    background-image: url("../../assets/People.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+  }
+}
