@@ -1,0 +1,81 @@
+.stepContainer {
+  width: 100%;
+  height: 759px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $yellow;
+
+  p {
+    font-family: $font-base;
+    font-size: $base-font-size*2.375;
+    line-height: $base-font-size*3.25;
+    margin-bottom: 0;
+  }
+
+  .stepContainer__decor {
+    height: 33px;
+    width: 253px;
+    display: block;
+    margin: 34px;
+  }
+
+  .stepContainer__gray {
+    width: 100%;
+    height: 325px;
+    display: flex;
+    justify-content: center;
+    background-color: $light-gray;
+
+    .stepContainer__gray__col {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 88px;
+
+      .stepContainer__gray__col__icon img {
+        width: 83px;
+        height: 83px;
+      }
+
+      h3 {
+        font-family: $font-base;
+        font-size: $base-font-size*1.125;
+        line-height: $base-font-size*1.5;
+        font-weight: normal;
+        margin: 8px;
+      }
+
+      .stepContainer__gray__col__rec {
+        width: 75px;
+        height: 0;
+        border: 0.25px solid $black;
+      }
+
+      p {
+        font-family: $font-base;
+        font-size: $base-font-size;
+        text-align: center;
+        line-height: $base-font-size*1.25;
+      }
+    }
+  }
+
+  .stepContainer__nav {
+    margin-top: 35px;
+    width: 310px;
+    height: 120px;
+    border: 0.75px solid $black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .El {
+      text-decoration: none;
+      font-size: $base-font-size*2.25;
+      color: $black;
+    }
+  }
+}

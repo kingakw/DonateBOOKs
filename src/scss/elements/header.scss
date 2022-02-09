@@ -1,0 +1,110 @@
+.headerWrapper {
+  width: 100%;
+  height: 963px;
+  display: flex;
+  background: url("../../assets/Home-Hero-Image.jpg");
+  background-repeat: no-repeat;
+  background-size: 885px 963px;
+  border: 1px solid $yellow;
+
+  .headerMenu {
+    position: relative;
+    width: 50%;
+    left: 50%;
+    /*border: 1px solid blue;*/
+
+    .headerMenu__header {
+      display: flex;
+      flex-direction: column;
+      /*border: 1px solid green;*/
+
+      .headerMenu__Nav {
+        font-size: $base-font-size*0.875;
+        color: $gray;
+        padding-top: $base-font-size*2.5;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 142px;
+
+        .headerMenu__Nav__el {
+          margin-left: $base-font-size*2;
+          text-decoration: none;
+          color: $black;
+
+          &:hover {
+            outline: 0.75px solid $yellow;
+            outline-offset: $base-font-size*0.5;
+          }
+        }
+      }
+
+      .headerMenu__Menu {
+        margin-top: $base-font-size*2.4;
+        display: flex;
+        cursor: pointer;
+        margin-right: 142px;
+        justify-content: flex-end;
+       /* border: 1px solid blue;
+*/
+
+        li {
+          font-size: $base-font-size*1.125;
+          margin-left: $base-font-size*3.5;
+          list-style: none;
+          text-align: left;
+
+          &:hover {
+            outline: 0.75px solid $gray;
+            outline-offset: $base-font-size*0.5;
+          }
+        }
+
+      }
+    }
+
+    .headerMenu__container {
+      position: relative;
+      width: 674px;
+      top: $base-font-size*12;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+
+      p {
+        font-size: $base-font-size*2.25;
+        text-align: center;
+        letter-spacing: -0.76px;
+      }
+
+      .headerMenu__Main__Decor {
+        height: 33px;
+        width: 253px;
+        display: block;
+        align-self: center;
+        margin-bottom: 65px;
+      }
+      nav{
+        display: flex;
+        justify-content: space-between;
+
+        .headerMenu__Main__Nav{
+          width: 310px;
+          height: 120px;
+          border: 0.75px solid $black;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .El{
+            text-decoration: none;
+            font-size: $base-font-size*2.25;
+            color: $black;
+          }
+
+        }
+      }
+
+    }
+  }
+}

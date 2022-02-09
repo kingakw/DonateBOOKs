@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Route,
   Routes
 } from "react-router-dom";
@@ -14,7 +14,7 @@ import Form from "./components/Form";
 
 function App() {
   return (
-      <Router>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Login" element={<Login />} />
@@ -30,7 +30,7 @@ function App() {
                 }
             />
         </Routes>
-      </Router>
+      </BrowserRouter>
   );
 }
 
