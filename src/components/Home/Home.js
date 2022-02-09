@@ -1,29 +1,23 @@
 import React from 'react';
 
-import HomeMain from "./HomeMain";
+import HomeSection1 from "./HomeSection1";
 import HomeThreeColumns from "./HomeThreeColums";
 import HomeFourSteps from "./HomeFourSteps";
 import HomeAboutUs from "./HomeAboutUs";
 import HomeHelp from "./HomeHelp";
 import HomeContact from "./HomeContact";
 import HomeFooter from "./HomeFooter";
-import HomeHeader from "./HomeHeader";
 
 const Home = () => {
     return (
         <div>
-            <header className="headerWrapper">
-                <div className="headerMenu">
-                    <HomeHeader/>
-                    <HomeMain/>
-                </div>
-            </header>
-                <HomeThreeColumns/>
-                <HomeFourSteps/>
-                <HomeAboutUs/>
-                <HomeHelp/>
-                <HomeContact/>
-                <HomeFooter/>
+            <HomeSection1/>
+            <HomeThreeColumns/>
+            <HomeFourSteps/>
+            <HomeAboutUs/>
+            <HomeHelp/>
+            <HomeContact/>
+            <HomeFooter/>
         </div>
     );
 };

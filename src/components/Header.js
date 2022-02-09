@@ -1,23 +1,22 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import Login from "../Login";
-import Register from "../Register";
+import Login from "./Login";
+import Register from "./Register";
 import { Link } from 'react-scroll';
-import HomeFourSteps from "./HomeFourSteps";
 
-const HomeHeader = () => {
+const Header = () => {
     return (
-        <div className="headerMenu__header">
-            <nav className="headerMenu__Nav">
-                <NavLink className="headerMenu__Nav__el" to="/Login" element={<Login/>}>
+        <div className="header__container">
+            <nav className="header__nav">
+                <NavLink className="header__nav__el" to="/Login" element={<Login/>}>
                     Zaloguj
                 </NavLink>
-                <NavLink className="headerMenu__Nav__el" to="/Register" element={<Register/>}>
+                <NavLink className="header__nav__el" to="/Register" element={<Register/>}>
                     Załóż konto
                 </NavLink>
             </nav>
 
-            <ul className="headerMenu__Menu">
+            <ul className="header__menu">
                 <li> Start  </li>
                 <li> <Link to ="fourSteps" smooth={true} > O co chodzi? </Link> </li>
                 <li> <Link to ="about" smooth={true} > O nas </Link> </li>
@@ -27,4 +26,4 @@ const HomeHeader = () => {
         </div>
     );
 };
-export default HomeHeader;
+export default Header;
