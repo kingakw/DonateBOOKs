@@ -7,9 +7,8 @@
   border: 1px solid $yellow;
 
   p {
-    font-family: $font-base;
-    font-size: $base-font-size*2.375;
-    line-height: $base-font-size*3.25;
+    font-size: $title-font-size;
+    line-height: $title-line-height;
     margin-bottom: 0;
   }
 
@@ -40,7 +39,6 @@
       }
 
       .stepContainer__gray__col__text {
-        font-family: $font-base;
         font-size: $base-font-size*1.125;
         line-height: $base-font-size*1.5;
         margin: 8px;
@@ -53,7 +51,6 @@
       }
 
       p {
-        font-family: $font-base;
         font-size: $base-font-size;
         text-align: center;
         line-height: $base-font-size*1.25;

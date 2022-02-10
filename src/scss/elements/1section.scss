@@ -17,8 +17,9 @@
     flex-direction: column;
 
     p {
-      margin-top:342px ;
-      font-size: $base-font-size*2.25;
+      margin-top:330px ;
+      font-size: $title-font-size;
+      line-height: $title-line-height;
       text-align: center;
       letter-spacing: -0.76px;
     }

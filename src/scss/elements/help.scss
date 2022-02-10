@@ -1,0 +1,66 @@
+.helpContainer {
+  width: 100%;
+  height: 1012px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $yellow;
+
+  .helpContainer__title {
+    font-family: $font-base;
+    font-size: $title-font-size;
+    line-height: $title-line-height;
+    margin-bottom: 25px;
+  }
+
+  .helpContainer__decor {
+    height: 33px;
+    width: 253px;
+    display: block;
+  }
+
+  .helpMenu {
+    margin-top: 62px;
+    display: flex;
+    cursor: pointer;
+
+    .helpMenu__btn {
+      width: 208px;
+      height: 79px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 50px;
+
+      p {
+        font-size: $base-font-size*1.5;
+        line-height: $base-font-size*1.5;
+        list-style: none;
+        text-align: center;
+      }
+
+      &:hover,
+      &.active {
+        outline: 0.75px solid $gray;
+        outline-offset: 0;
+      }
+
+    }
+  }
+
+  .helpMenu__places .helpMenu__text {
+    display:none;
+
+    &.active {
+      margin-top: 80px;
+      width: 640px;
+      height: 94px;
+      display:block;
+      font-size: $base-font-size*1.375;
+      line-height: $base-font-size*1.875;
+      text-align: center;
+    }
+  }
+}
+
+
