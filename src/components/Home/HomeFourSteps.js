@@ -21,7 +21,7 @@ const HomeFourSteps = () => {
                     <div className="stepContainer__gray__col__icon">
                         <img src={Icon1} alt="shirt"/>
                     </div>
-                    <h3 > Wybierz rzeczy</h3>
+                    <p className="stepContainer__gray__col__text"> Wybierz rzeczy</p>
                     <div className="stepContainer__gray__col__rec"/>
                     <p> ubrania, zabawki,
                         <br/>sprzęt i inne
@@ -32,7 +32,7 @@ const HomeFourSteps = () => {
                     <div className="stepContainer__gray__col__icon">
                         <img src={Icon2} alt="shirt"/>
                     </div>
-                    <h3 > Spakuj je </h3>
+                    <p className="stepContainer__gray__col__text"> Spakuj je </p>
                     <div className="stepContainer__gray__col__rec"/>
                     <p> skorzystaj z
                         <br/>worków na śmieci
@@ -43,8 +43,8 @@ const HomeFourSteps = () => {
                     <div className="stepContainer__gray__col__icon">
                         <img src={Icon3} alt="shirt"/>
                     </div>
-                    <h3 > Zdecyduj komu
-                        <br/>chcesz pomóc</h3>
+                    <p className="stepContainer__gray__col__text"> Zdecyduj komu
+                        <br/>chcesz pomóc</p>
                     <div className="stepContainer__gray__col__rec"/>
                     <p> wybierz zaufane
                         <br/>miejsce
@@ -55,7 +55,7 @@ const HomeFourSteps = () => {
                     <div className="stepContainer__gray__col__icon">
                         <img src={Icon4} alt="shirt"/>
                     </div>
-                    <h3 > Zamów kuriera </h3>
+                    <p className="stepContainer__gray__col__text"> Zamów kuriera </p>
                     <div className="stepContainer__gray__col__rec"/>
                     <p> kurier przyjedzie
                         <br/> w dogodnym terminie

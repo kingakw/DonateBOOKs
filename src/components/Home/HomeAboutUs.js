@@ -1,5 +1,6 @@
 import React from 'react';
 import Decoration from "../../assets/Decoration.svg"
+import Signature from "../../assets/Signature.svg"
 
 
 const HomeAboutUs = () => {
@@ -14,10 +15,12 @@ const HomeAboutUs = () => {
                     <br/>greens fava bean potato quandong celery.
                     <br/>Bunya nuts black-eyed pea prairie turnip leek
                     <br/>lentil turnip greens parsnip. </p>
+                <div className="aboutUs__signature">
+                    <img src={Signature} alt="signature"/>
+                </div>
             </div>
-            <div className="aboutUs__img">
+            <div className="aboutUs__img"/>
 
-            </div>
         </div>
     );
 };

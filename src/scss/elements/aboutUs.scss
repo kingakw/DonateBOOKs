@@ -9,14 +9,34 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 
+    .aboutUs__info__text{
+      font-size: $base-font-size*2.375;
+      line-height: $base-font-size*3.43;
+      letter-spacing: -0.76px;
+    }
 
     .aboutUs__info__decor{
       height: 33px;
       width: 253px;
       display: block;
       align-self: center;
+    }
+
+    .aboutUs__info__text2{
+      font-size: $base-font-size*1.875;
+      line-height: $base-font-size*3.375;
+      letter-spacing: -0.6px;
+      text-align: center;
+    }
+    .aboutUs__signature{
+      width: 210px;
+      height: 149px;
+      align-self: flex-end;
+      margin-right: 150px;
+
 
     }
   }
@@ -28,4 +48,6 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+
 }

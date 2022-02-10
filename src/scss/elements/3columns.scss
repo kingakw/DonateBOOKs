@@ -10,17 +10,16 @@
     width: 334px;
     text-align: center;
 
-    h2 {
+    .colContainer__column__text1{
       margin: 0;
       font-size: $base-font-size*5.625;
       line-height: $base-font-size*7.625;
-      font-weight: lighter;
+
     }
-    h3 {
+    .colContainer__column__text2 {
       font-size: $base-font-size*1.125;
       line-height: $base-font-size*1.876;
       letter-spacing: -0.36px;
-      font-weight: normal;
     }
     p{
       font-size: $base-font-size;
