@@ -4,13 +4,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid $yellow;
+  position: relative;
 
   .helpContainer__title {
     font-family: $font-base;
     font-size: $title-font-size;
     line-height: $title-line-height;
     margin-bottom: 25px;
+    margin-top: 70px;
   }
 
   .helpContainer__decor {
@@ -37,6 +38,7 @@
         line-height: $base-font-size*1.5;
         list-style: none;
         text-align: center;
+        padding-top: 15px;
       }
 
       &:hover,
@@ -49,18 +51,70 @@
   }
 
   .helpMenu__places .helpMenu__text {
-    display:none;
+    display: none;
 
     &.active {
       margin-top: 80px;
       width: 640px;
       height: 94px;
-      display:block;
+      display: block;
       font-size: $base-font-size*1.375;
       line-height: $base-font-size*1.875;
       text-align: center;
     }
   }
+
+  .helpMenu__list {
+    width: 1344px;
+    font-family: $font-alt;
+
+    .helpMenu__list__place {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: 1px solid $black;
+
+      .helpMenu__list__place__container {
+        width: 650px;
+        height: 90px;
+        margin-bottom: 32px;
+
+        .helpMenu__list__place__text1 {
+          font-size: $base-font-size * 1.625;
+          margin-bottom: 6px;
+          margin-top: 32px;
+        }
+
+        .helpMenu__list__place__text2 {
+          font-size: $base-font-size*1.125;
+          line-height: $base-font-size*1.375;
+          margin-top: 0;
+        }
+      }
+
+      .helpMenu__list__place__text3 {
+        align-self: center;
+      }
+    }
+    div.helpMenu__list__place:nth-of-type(3),
+   div.helpMenu__list__place:last-of-type{
+      border-bottom: none;
+    }
+
+  }
+
+  .helpMenu__pg {
+    position: absolute;
+    display: none;
+    bottom: 60px;
+
+    &.active {
+      display: block;
+    }
+  }
 }
+
+
+
 
 

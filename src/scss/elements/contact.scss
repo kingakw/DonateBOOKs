@@ -1,0 +1,41 @@
+.contactContainer {
+  width: 100%;
+  height: 1026px;
+  display: flex;
+  background-image: url("../../assets/Background-Contact-Form.jpg");
+
+  .contactContainer__whiteBck {
+    width: 60%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.8;
+  }
+
+  .contact__bck {
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    .contact__bck__title {
+      font-size: $title-font-size;
+      line-height: $title-line-height;;
+      letter-spacing: -0.76px;
+      color: $black;
+      margin-bottom: 25px;
+    }
+
+    .contact__bck__decor {
+      height: 33px;
+      width: 253px;
+      display: block;
+      align-self: center;
+    }
+  }
+
+}
+
