@@ -35,14 +35,14 @@ const HomeContact = () => {
 
                 <form onSubmit={handleSubmit}>
                     <div className="contact__bck__box">
-                    <div className="contact__bck__name">
+                    <label className="contact__bck__name">
                         Wpisz swoje imię
                         <input type="text" name="name" value={form.name} onChange={handleChange}/>
-                    </div>
-                    <div className="contact__bck__name">
+                    </label>
+                    <label className="contact__bck__name">
                         Wpisz swój email
                         <input type="text" name="email" value={form.email} onChange={handleChange}/>
-                    </div>
+                    </label>
                     </div>
                     <label className="contact__bck__msg">
                         Wpisz swoją wiadomość
