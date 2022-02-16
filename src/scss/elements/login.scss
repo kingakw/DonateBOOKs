@@ -1,3 +1,4 @@
+
 .logContainer {
   width: 100vw;
   max-width: 1900px;
@@ -74,13 +75,19 @@
     .logContainer__btn{
       font-size: $base-font-size*1.125;
       line-height: $base-font-size*2;
-      border-style:  none;
 
-      &:hover {
-        text-decoration-line: none;
+      input {
+        border-style: none;
+        background: none;
         outline: 0.75px solid $gray;
-        outline-offset: $base-font-size*0.5;
+        outline-offset: $base-font-size*0.75;
+
+        &:hover {
+          text-decoration-line: none;
+          outline:  0.75px solid $yellow;
+        }
       }
     }
   }
 }
+

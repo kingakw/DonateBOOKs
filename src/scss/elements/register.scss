@@ -1,0 +1,92 @@
+.regContainer {
+  width: 100vw;
+  max-width: 1900px;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  background: #FFFFFF 0 0;
+  border: 0.5px solid $light-gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .regContainer__text {
+    margin-top: 246px;
+    font-size: $title-font-size;
+    line-height: $title-line-height;
+    letter-spacing: -0.8px;
+  }
+
+  .regContainer__decor {
+    margin-top: 25px;
+    height: 33px;
+    width: 253px;
+    display: block;
+    align-self: center;
+    margin-bottom: 60px;
+  }
+
+  .regContainer__grey{
+    background: $light-gray;
+    height: 328px;
+    width: 385px;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .regContainer__email,
+      .regContainer__password{
+        width: 250px;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px;
+
+        input {
+          border: none;
+          border-bottom: 1px solid $gray;
+          background: none;
+          height: $base-font-size*1.5;
+        }
+      }
+    }
+  }
+  .regContainer__nav{
+    margin-top: 53px;
+    width: 504px;
+    display: flex;
+    justify-content: space-between;
+
+    .regContainer__nav__el {
+      color: $black;
+      font-size: $base-font-size*1.125;
+      line-height: $base-font-size*2;
+
+      &:hover {
+        text-decoration-line: none;
+        outline: 0.75px solid $gray;
+        outline-offset: $base-font-size*0.5;
+      }
+    }
+
+    .regContainer__btn{
+      font-size: $base-font-size*1.125;
+      line-height: $base-font-size*2;
+
+      input {
+        border-style: none;
+        background: none;
+        outline: 0.75px solid $gray;
+        outline-offset: $base-font-size*0.75;
+
+        &:hover {
+          text-decoration-line: none;
+          outline:  0.75px solid $yellow;
+        }
+      }
+    }
+  }
+}
+
