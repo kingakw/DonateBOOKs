@@ -1,0 +1,53 @@
+.logoutContainer {
+  width: 100vw;
+  max-width: 1900px;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  background: #FFFFFF 0 0;
+  border: 0.5px solid $light-gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .logoutContainer__text {
+    margin-top: 246px;
+    font-size: $title-font-size;
+    line-height: $title-line-height;
+    letter-spacing: -0.8px;
+    text-align: center;
+  }
+
+  .logoutContainer__decor {
+    margin-top: 25px;
+    height: 33px;
+    width: 253px;
+    display: block;
+    align-self: center;
+    margin-bottom: 60px;
+  }
+
+
+  .logoutContainer__nav {
+    margin-top: 35px;
+    width: 150px;
+    height: 50px;
+    border: 0.75px solid $gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logoutContainer__nav__el{
+      color: $black;
+      font-size: $base-font-size*1.125;
+      line-height: $base-font-size*2;
+
+      &:hover {
+        text-decoration-line: none;
+        background:  $yellow;
+      }
+    }
+  }
+  }
+
+
