@@ -24,27 +24,24 @@
     width: 253px;
     display: block;
     align-self: center;
-    margin-bottom: 60px;
+    margin-bottom: 35px;
   }
 
-
   .logoutContainer__nav {
-    margin-top: 35px;
-    width: 150px;
-    height: 50px;
-    border: 0.75px solid $gray;
     display: flex;
-    justify-content: center;
-    align-items: center;
 
     .logoutContainer__nav__el{
       color: $black;
       font-size: $base-font-size*1.125;
       line-height: $base-font-size*2;
+      width: 160px;
+      padding:  13px 18px ;
+      border: 0.75px solid $gray;
+      text-align: center;
 
       &:hover {
         text-decoration-line: none;
-        background:  $yellow;
+        border: 0.75px solid $yellow;
       }
     }
   }

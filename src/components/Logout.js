@@ -12,7 +12,7 @@ const Logout = () => {
             </div>
 
             <div className="logoutContainer__nav">
-                <NavLink className="logoutContainer__nav__el" to="/Login" element={<Home/>}>
+                <NavLink className="logoutContainer__nav__el" to="/" element={<Home/>}>
                     Strona główna
                 </NavLink>
             </div>

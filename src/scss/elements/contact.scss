@@ -12,114 +12,138 @@
     opacity: 0.9;
   }
 }
-  .contact__bck {
-    margin-right: 142px;
-    height: 100%;
+
+.contact__bck {
+  margin-right: 142px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  .contact__bck__title {
+    font-size: $title-font-size;
+    line-height: $title-line-height;;
+    letter-spacing: -0.76px;
+    color: $black;
+    margin-bottom: 25px;
+  }
+
+  .contact__bck__decor {
+    height: 33px;
+    width: 253px;
+    display: block;
+    align-self: center;
+  }
+}
+
+.contact__bck__box {
+  margin-top: 77px;
+  display: flex;
+  width: 528px;
+  justify-content: space-between;
+
+  .contact__bck__name {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-
-    .contact__bck__title {
-      font-size: $title-font-size;
-      line-height: $title-line-height;;
-      letter-spacing: -0.76px;
-      color: $black;
-      margin-bottom: 25px;
-    }
-
-    .contact__bck__decor {
-      height: 33px;
-      width: 253px;
-      display: block;
-      align-self: center;
-    }
-  }
-
-  .contact__bck__box{
-    margin-top: 77px;
-    display: flex;
-    width: 528px;
-    justify-content: space-between;
-
-    .contact__bck__name{
-      display: flex;
-      flex-direction: column;
-      width: 256px;
-      height: 62px;
-      font-size: $base-font-size;
-      font-weight: bold;
-
-      input{
-        margin-top: 12px;
-        width: 100%;
-        height: 24px;
-        border: none;
-        border-bottom: 1px solid $gray;
-        font-size: $base-font-size*1.125;
-        line-height: $base-font-size*1.5;
-        color: $gray;
-        opacity: 0.7;
-    }
-
-    }
-  }
-    .contact__bck__msg{
-      margin-top: 40px;
-      display: flex;
-      flex-direction: column;
-      font-size: $base-font-size;
-      font-weight: bold;
-
-      textarea{
-        margin-top: 12px;
-        width: 528px;
-        height: 97px;
-        border: none;
-        border-bottom: 1px solid $gray;
-        font-size: $base-font-size*1.125;
-        line-height: $base-font-size*1.5;
-        color: $gray;
-        opacity: 0.7;
-      }
-    }
-
-  .contact__bck__btn {
-    display: flex;
-    justify-content: flex-end;
+    width: 256px;
+    height: 62px;
+    font-size: $base-font-size;
+    font-weight: bold;
 
     input {
-      margin-top: 40px;
-      width: 150px;
-      height: 50px;
-      border: 1px solid $gray;
-      background: none;
+      margin-top: 12px;
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid $gray;
+      font-size: $base-font-size*1.125;
+      color: $black;
+      opacity: 0.7;
+      &:focus {
+        outline: 5px solid $yellow;
+      }
     }
   }
 
-.footer__container{
+}
+
+.contact__bck__msg {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  font-size: $base-font-size;
+  font-weight: bold;
+
+  textarea {
+    margin-top: 12px;
+    width: 528px;
+    height: 97px;
+    border: none;
+    border-bottom: 1px solid $gray;
+    font-size: $base-font-size*1.125;
+    line-height: $base-font-size*1.5;
+    color: $gray;
+    opacity: 0.7;
+
+    &:focus {
+      outline: 5px solid $yellow;
+    }
+  }
+}
+
+.error {
+  margin-top: $base-font-size;
+  font-size: $base-font-size *0.9;
+  font-weight: bold;
+  color: red;
+}
+
+.success {
+  margin-top: $base-font-size;
+  font-size: $base-font-size;
+  font-weight: bold;
+  color: green;
+  text-align: center;
+  width: 250px;
+}
+
+.contact__bck__btn {
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    margin-top: 40px;
+    width: 150px;
+    height: 50px;
+    border: 1px solid $gray;
+    background: none;
+  }
+}
+
+.footer__container {
   width: 100%;
   position: absolute;
   right: 0;
   bottom: 0;
   display: flex;
- justify-content: center;
+  justify-content: center;
   align-items: center;
   margin-bottom: 22px;
 
-  .footer__title{
+  .footer__title {
     font-size: $base-font-size*1.125;
     line-height: $base-font-size*1.5;
   }
 
-  .footer__social{
+  .footer__social {
     position: absolute;
     right: 0;
     margin-right: 142px;
-    img{
+
+    img {
       padding-left: 20px;
     }
   }
