@@ -7,12 +7,10 @@ const HomeContact = () => {
     const [email, setEmail] = useState("abc@xyz.pl");
     const [msg, setMsg] = useState("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
     const [sucess, setSucess] = useState("");
-
+    const [user, setUser] = useState(null);
     const [nameErr, setNameErr] = useState({});
     const [emailErr, setEmailErr] = useState({});
     const [msgErr, setMsgErr] = useState({});
-
-
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -24,15 +22,32 @@ const HomeContact = () => {
             setEmail("");
             setSucess("Wiadomość została wysłana! Wkrótce się skontaktujmy");
 
-            const data = [
-                { "name": name},
-                { "email": email},
-                { "msg": msg},
-            ];
+            const uss = {
+                 name: name,
+                 email: email,
+                 message: msg,
+            };
 
-            console.log(JSON.stringify(data));
+            setUser(uss)
+
         }
     };
+
+
+    useEffect(
+        () => {
+
+            fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
+                method: "POST",
+                body: JSON.stringify(user),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+        }, [user]
+    )
+
+
 
     const formValidation = () =>{
         const nameErr = {};
@@ -45,7 +60,7 @@ const HomeContact = () => {
             isValid = false;
         }
         if(name.length < 3) {
-            nameErr.nameShort = "Imię musi mieć conajmniej 3 znaki!";
+            nameErr.nameShort = "Imię musi mieć conajmniej 4 znaki!";
             isValid = false;
         }
 
