@@ -1,9 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Decoration from "../assets/Decoration.svg"
 import {NavLink} from "react-router-dom";
 import Register from "./Register";
 
 const Login = () => {
+ /*   const [email, setEmail] = useState(null);
+    const [password, setPassword] = useState(null);
+    const [emailErr, setEmailErr] = useState({});
+    const [passwordErr, setPasswordErr] = useState({});
+    const [sucess, setSucess] = useState("");
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        const isValid = logValidation();
+
+    };*/
+
     return (
         <div className="logContainer">
             <p className="logContainer__text"> Zaloguj się </p>
@@ -12,7 +24,7 @@ const Login = () => {
             </div>
 
             <div className="logContainer__grey">
-                <form onSubmit={''}>
+                <form onSubmit={``}>
                     <label className="logContainer__email">
                         Email
                         <input type="text" name="email"/>
@@ -29,7 +41,7 @@ const Login = () => {
                     Załóż konto
                 </NavLink>
                 <div className="logContainer__btn">
-                    <input type="submit" value="Zaloguj się"/>
+                    <button type="submit"> Zaloguj się </button>
                 </div>
             </div>
 

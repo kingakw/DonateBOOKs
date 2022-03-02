@@ -2,12 +2,11 @@ import React, {useEffect, useState} from 'react';
 import Decoration from "../../assets/Decoration.svg";
 
 const HomeContact = () => {
-
     const [name, setName] = useState("Anna");
     const [email, setEmail] = useState("abc@xyz.pl");
     const [msg, setMsg] = useState("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
     const [sucess, setSucess] = useState("");
-    const [user, setUser] = useState(null);
+    const [postData, setPostData] = useState(null);
     const [nameErr, setNameErr] = useState({});
     const [emailErr, setEmailErr] = useState({});
     const [msgErr, setMsgErr] = useState({});
@@ -20,33 +19,26 @@ const HomeContact = () => {
             setName("");
             setMsg("");
             setEmail("");
-            setSucess("Wiadomość została wysłana! Wkrótce się skontaktujmy");
 
-            const uss = {
-                 name: name,
-                 email: email,
-                 message: msg,
-            };
-
-            setUser(uss)
-
+            setPostData({
+                name: name,
+                email: email,
+                message: msg,
+            });
         }
     };
 
-
-    useEffect(
-        () => {
-
-            fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
+    useEffect(async () => {
+            const response = await fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
                 method: "POST",
-                body: JSON.stringify(user),
-                headers: {
-                    "Content-Type": "application/json"
-                }
+                body: JSON.stringify(postData),
+                headers: {"Content-Type": "application/json"}
             });
-        }, [user]
-    )
-
+            console.log(response);
+            if (response.ok) {
+                setSucess("Wiadomość została wysłana! Wkrótce się skontaktujmy");
+            }
+        }, [postData]);
 
 
     const formValidation = () =>{
@@ -60,7 +52,7 @@ const HomeContact = () => {
             isValid = false;
         }
         if(name.length < 3) {
-            nameErr.nameShort = "Imię musi mieć conajmniej 4 znaki!";
+            nameErr.nameShort = "Imię musi mieć conajmniej 3 znaki!";
             isValid = false;
         }
 
@@ -81,7 +73,6 @@ const HomeContact = () => {
         setSucess("")
         return isValid;
     }
-
 
     return (
         <div className="contactContainer" name="contact">
