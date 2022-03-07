@@ -2,9 +2,9 @@ import React, {useEffect, useState} from 'react';
 import Decoration from "../../assets/Decoration.svg";
 
 const HomeContact = () => {
-    const [name, setName] = useState("Anna");
-    const [email, setEmail] = useState("abc@xyz.pl");
-    const [msg, setMsg] = useState("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [msg, setMsg] = useState("");
     const [sucess, setSucess] = useState("");
     const [postData, setPostData] = useState(null);
     const [nameErr, setNameErr] = useState({});
@@ -34,7 +34,6 @@ const HomeContact = () => {
                 body: JSON.stringify(postData),
                 headers: {"Content-Type": "application/json"}
             });
-            console.log(response);
             if (response.ok) {
                 setSucess("Wiadomość została wysłana! Wkrótce się skontaktujmy");
             }
@@ -92,29 +91,35 @@ const HomeContact = () => {
                         Wpisz swoje imię
                         <input type="text"
                                name="name"
+                               placeholder='Anna'
                                value={name}
-                               onChange={(e) => {setName(e.target.value)}}/>
-                        {Object.keys(nameErr).map((key)=>{
-                            return <div className="error"> {nameErr[key]} </div>
+                               onChange={(e) => {setName(e.target.value)}}
+                        />
+                      {Object.keys(nameErr).map((key)=>{
+                            return <div className="error" key={key}> {nameErr[key]} </div>
                             })}
                     </label>
                     <label className="contact__bck__name">
                         Wpisz swój email
                         <input type="text"
                                name="email"
+                               placeholder='abc@xyz.pl'
                                value={email}
-                               onChange={(e) => {setEmail(e.target.value)}}/>
+                               onChange={(e) => {setEmail(e.target.value)}}
+                        />
                         {Object.keys(emailErr).map((key)=>{
-                            return <div className="error"> {emailErr[key]} </div>
+                            return <div className="error" key={key} > {emailErr[key]} </div>
                         })}
                     </label>
                     </div>
                     <label className="contact__bck__msg">
                         Wpisz swoją wiadomość
                         <textarea value={msg}
-                                  onChange={(e) => {setMsg(e.target.value)}}/>
+                                  placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                                  onChange={(e) => {setMsg(e.target.value)}}
+                        />
                         {Object.keys(msgErr).map((key)=>{
-                            return <div className="error"> {msgErr[key]} </div>
+                            return <div className="error" key={key}> {msgErr[key]} </div>
                         })}
                     </label>
                     <div className="contact__bck__btn">

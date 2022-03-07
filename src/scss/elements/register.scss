@@ -21,34 +21,37 @@
     margin-top: 25px;
     height: 33px;
     width: 253px;
-    display: block;
-    align-self: center;
     margin-bottom: 60px;
   }
 
-  .regContainer__grey{
-    background: $light-gray;
-    height: 328px;
+  .regContainer__reg {
+    height: 418px;
     width: 385px;
 
     form {
       display: flex;
       flex-direction: column;
-      justify-content: center;
 
-      .regContainer__email,
-      .regContainer__password{
-        width: 250px;
-        align-self: center;
+      .regContainer__grey {
+        background: $light-gray;
+        height: 328px;
+        width: 385px;
         display: flex;
         flex-direction: column;
-        padding-top: 40px;
+        justify-content: space-evenly;
 
-        input {
-          border: none;
-          border-bottom: 1px solid $gray;
-          background: none;
-          height: $base-font-size*1.5;
+        .regContainer__email,
+        .regContainer__password {
+          display: flex;
+          flex-direction: column;
+          margin: 0 67px;
+
+          input {
+            border: none;
+            border-bottom: 1px solid $gray;
+            background: none;
+            height: $base-font-size*1.5;
+          }
         }
       }
     }
@@ -56,6 +59,7 @@
   .regContainer__nav{
     margin-top: 53px;
     width: 504px;
+    align-self: center;
     display: flex;
     justify-content: space-between;
 
@@ -75,7 +79,7 @@
       font-size: $base-font-size*1.125;
       line-height: $base-font-size*2;
 
-      input {
+      button {
         border-style: none;
         background: none;
         outline: 0.75px solid $gray;
@@ -87,6 +91,13 @@
         }
       }
     }
+  }
+  .error {
+    margin-top: $base-font-size *0.5;
+    font-size: $base-font-size *0.9;
+    line-height: $base-font-size;
+    font-weight: bold;
+    color: red;
   }
 }
 

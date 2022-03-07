@@ -22,40 +22,42 @@
     margin-top: 25px;
     height: 33px;
     width: 253px;
-    display: block;
-    align-self: center;
     margin-bottom: 65px;
   }
 
-  .logContainer__grey{
-    background: $light-gray;
-    height: 235px;
-    width: 385px;
+  .logContainer__log {
+    width: 499px;
+    height: 418px;
 
     form {
       display: flex;
       flex-direction: column;
-      justify-content: center;
 
-      .logContainer__email,
-      .logContainer__password{
-        width: 250px;
+      .logContainer__grey {
+        background: $light-gray;
+        height: 235px;
+        width: 385px;
         align-self: center;
-        display: flex;
-        flex-direction: column;
-        padding-top: 40px;
 
-        input {
-          border: none;
-          border-bottom: 1px solid $gray;
-          background: none;
-          height: $base-font-size*1.5;
+        .logContainer__email,
+        .logContainer__password {
+          display: flex;
+          flex-direction: column;
+          margin: 30px 67px 0;
+
+          input {
+            border: none;
+            border-bottom: 1px solid $gray;
+            background: none;
+            height: $base-font-size*1.5;
+          }
         }
       }
     }
   }
+
   .logContainer__nav{
-    margin-top: 53px;
+    padding-top: 50px;
     width: 504px;
     display: flex;
     justify-content: space-between;
@@ -89,8 +91,6 @@
       }
     }
   }
-}
-
 
 .error {
   margin-top: $base-font-size *0.5;
@@ -99,12 +99,5 @@
   font-weight: bold;
   color: red;
 }
-
-.success {
-  margin-top: $base-font-size;
-  font-size: $base-font-size;
-  font-weight: bold;
-  color: green;
-  text-align: center;
-  width: 250px;
 }
+
