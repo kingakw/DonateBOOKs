@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+// uprośc kod tzn przeiterowac
 const HomeThreeColumns = () => {
     return (
         <div className="colContainer">

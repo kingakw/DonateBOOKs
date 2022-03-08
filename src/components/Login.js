@@ -19,6 +19,8 @@ const Login = () => {
          }
     }
 
+ /// wyciagnac do helpers to co sie powtarza w walidacji Login / Register / HomeContact
+
     const logValidation = () => {
         const passwordErr = {};
         const emailErr = {};

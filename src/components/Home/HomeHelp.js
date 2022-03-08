@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Decoration from "../../assets/Decoration.svg";
 import Pagination from "./Pagination";
-import {placesCol, placesFund, placesOrg} from "./places";
+import {placesCol, placesFund, placesOrg} from "../data/places";
 import {Link} from 'react-scroll';
 
 const HomeHelp = () => {
@@ -22,18 +22,10 @@ const HomeHelp = () => {
     ///// Change page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-    const handleToggle1 = () => {
+    const handleToggle = (number) => {
         setCurrentPage(1);
-        setIndex(1);
+        setIndex(number);
     };
-    const handleToggle2 = () => {
-        setIndex(2);
-        setCurrentPage(1);
-    };
-    const handleToggle3 = () => {
-        setIndex(3);
-        setCurrentPage(1);
-    }
 
     return (
         <div className="helpContainer" name="help">
@@ -43,13 +35,13 @@ const HomeHelp = () => {
             </div>
 
             <nav className="helpMenu">
-                <div onClick={handleToggle1} className={`helpMenu__btn ${index === 1 ? "active" : ""}`}>
+                <div onClick={() => handleToggle(1)} className={`helpMenu__btn ${index === 1 ? "active" : ""}`}>
                     <p> Fundacjom </p>
                 </div>
-                <div onClick={handleToggle2} className={`helpMenu__btn ${index === 2 ? "active" : ""}`}>
+                <div onClick={() => handleToggle(2)} className={`helpMenu__btn ${index === 2 ? "active" : ""}`}>
                     <p> Organizacjom pozarządowym </p>
                 </div>
-                <div onClick={handleToggle3} className={`helpMenu__btn ${index === 3 ? "active" : ""}`}>
+                <div onClick={() => handleToggle(3)} className={`helpMenu__btn ${index === 3 ? "active" : ""}`}>
                     <p> Lokalnym zbiórkom </p>
                 </div>
             </nav>
@@ -68,6 +60,8 @@ const HomeHelp = () => {
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation.</p>
             </div>
+
+            /// uprościc ten kod
             {index === 1 && (<div className="helpMenu__list">
                     {currentPlacesFund.map(({name, id, description, staff}) => (
                         <div className="helpMenu__list__place" key={id}>

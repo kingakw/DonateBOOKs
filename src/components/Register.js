@@ -23,6 +23,8 @@ const Register = () => {
         }
     }
 
+    /// wyciagnac do helpers to co sie powtarza w walidacji Login / Register / HomeContact
+
     const regValidation = () => {
         const passwordErr = {};
         const passwordRepeatErr = {};

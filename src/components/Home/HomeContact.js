@@ -28,17 +28,19 @@ const HomeContact = () => {
         }
     };
 
-    useEffect(async () => {
-            const response = await fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
+    useEffect( () => {
+        (async () => {
+        const response = await fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
                 method: "POST",
                 body: JSON.stringify(postData),
                 headers: {"Content-Type": "application/json"}
             });
             if (response.ok) {
                 setSucess("Wiadomość została wysłana! Wkrótce się skontaktujmy");
-            }
+            }}) ()
         }, [postData]);
 
+    /// wyciagnac do helpers to co sie powtarza w walidacji Login / Register / HomeContact
 
     const formValidation = () =>{
         const nameErr = {};

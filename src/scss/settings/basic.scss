@@ -1,0 +1,7 @@
+$mob-screen: 768px;
+
+@mixin mobile {
+  @media (max-width: $mob-screen) {
+    @content;
+  }
+}
