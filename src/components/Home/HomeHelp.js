@@ -55,13 +55,13 @@ const HomeHelp = () => {
     ]
 
     const namePlace = places.map((place) =>
-        <div onClick={() => handleToggle(place.id)} className={`menu__btn ${index === place.id ? "active" : ""}`}>
+        <div key={place.id} onClick={() => handleToggle(place.id)} className={`menu__btn ${index === place.id ? "active" : ""}`}>
             <p> {place.type} </p>
         </div>
     )
 
     const infoPlace = places.map((place) =>
-        <p className={`places__text ${index === place.id ? "active" : ""}`}> {place.info} </p>
+        <p key={place.id} className={`places__text ${index === place.id ? "active" : ""}`}> {place.info} </p>
     )
 
     const listPLaces = (typeofPlace) =>
@@ -80,7 +80,7 @@ const HomeHelp = () => {
 
     const paginatePlace = (typeofPlace)  =>
         places.map((place) =>
-        <div className={`help__page  ${index === place.id ? "active" : ""}`}>
+        <div key={place.id} className={`help__page  ${index === place.id ? "active" : ""}`}>
             <Pagination placesPerPage={placesPerPage} totalPlaces={typeofPlace.length} paginate={paginate}/>
         </div>
     )
