@@ -1,25 +1,28 @@
-.colContainer{
+.container{
   width: 100%;
-  height: 384px;
-  background-color: $yellow;
+  max-width: $desktop-width;
+  height: 325px;
+  background-color: $highlight;
   display: flex;
   justify-content: space-around;
   align-items: center;
 
-  .colContainer__column{
+  .treeColumns{
     width: 334px;
     text-align: center;
 
-    .colContainer__column__text1{
+    .treeColumns__text1{
       margin: 0;
-      font-size: $base-font-size*5.625;
+      font-size: $base-font-size*4;
       line-height: $base-font-size*7.625;
 
     }
-    .colContainer__column__text2 {
+    .treeColumns__text2 {
       font-size: $base-font-size*1.125;
-      line-height: $base-font-size*1.876;
-      letter-spacing: -0.36px;
+      line-height: $base-font-size*1.875;
+      letter-spacing: -0.4px;
+      text-transform: uppercase;
+      font-weight: bold;
     }
     p{
       font-size: $base-font-size;

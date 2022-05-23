@@ -9,63 +9,55 @@ import Login from "../Login";
 
 
 const HomeFourSteps = () => {
+    const steps = [
+        {
+            id: 1,
+            img: Icon1,
+            text1: `collect books`,
+            text2: `comic books, classics, fiction or non-fiction, education books`,
+        },
+        {
+            id: 2,
+            img: Icon2,
+            text1: `pack`,
+            text2: `use cardboard boxes`,
+        },
+        {
+            id: 3,
+            img: Icon3,
+            text1: `choose institution`,
+            text2: `library, school, child-care home, etc`,
+        },
+        {
+            id: 4,
+            img: Icon4,
+            text1: `call for pick up`,
+            text2: `arrange a convenient day and time`,
+        }
+    ]
+
+    const listSteps = steps.map((step)=>
+        <div key={step.id} className="gray__column">
+            <div className="column__icon">
+                <img src={step.img} alt="shirt"/>
+            </div>
+            <p className="column__text1"> {step.text1}</p>
+            <div className="column__line"/>
+            <p className="column__text2"> {step.text2} </p>
+        </div>
+    )
     return (
-        <div className="stepContainer" id="fourSteps">
-            <p> Wystarczą 4 proste kroki </p>
+        <div className="stepContainer">
+            <p> Four easy steps</p>
             <div className="stepContainer__decor">
                 <img src={Decoration} alt="decoration"/>
             </div>
             <div className="stepContainer__gray">
-
-                <div className="stepContainer__gray__col">
-                    <div className="stepContainer__gray__col__icon">
-                        <img src={Icon1} alt="shirt"/>
-                    </div>
-                    <p className="stepContainer__gray__col__text"> Wybierz rzeczy</p>
-                    <div className="stepContainer__gray__col__rec"/>
-                    <p> ubrania, zabawki,
-                        <br/>sprzęt i inne
-                    </p>
-                </div>
-
-                <div className="stepContainer__gray__col">
-                    <div className="stepContainer__gray__col__icon">
-                        <img src={Icon2} alt="shirt"/>
-                    </div>
-                    <p className="stepContainer__gray__col__text"> Spakuj je </p>
-                    <div className="stepContainer__gray__col__rec"/>
-                    <p> skorzystaj z
-                        <br/>worków na śmieci
-                    </p>
-                </div>
-
-                <div className="stepContainer__gray__col">
-                    <div className="stepContainer__gray__col__icon">
-                        <img src={Icon3} alt="shirt"/>
-                    </div>
-                    <p className="stepContainer__gray__col__text"> Zdecyduj komu
-                        <br/>chcesz pomóc</p>
-                    <div className="stepContainer__gray__col__rec"/>
-                    <p> wybierz zaufane
-                        <br/>miejsce
-                    </p>
-                </div>
-
-                <div className="stepContainer__gray__col">
-                    <div className="stepContainer__gray__col__icon">
-                        <img src={Icon4} alt="shirt"/>
-                    </div>
-                    <p className="stepContainer__gray__col__text"> Zamów kuriera </p>
-                    <div className="stepContainer__gray__col__rec"/>
-                    <p> kurier przyjedzie
-                        <br/> w dogodnym terminie
-                    </p>
-                </div>
-
+                {listSteps}
             </div>
 
             <div className="stepContainer__nav">
-                <Link className="El" to="/Login" element={<Login/>}> ODDAJ <br/> RZECZY </Link>
+                <Link className="nav__btn" to="/Login" element={<Login/>}> DONATE <br/> BOOKS </Link>
             </div>
 
         </div>

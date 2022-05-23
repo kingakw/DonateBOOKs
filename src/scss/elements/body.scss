@@ -1,12 +1,13 @@
 body {
   font-family: $font-base;
+  max-width: $desktop-width;
 }
 
 .mainContainer {
   width: 100vw;
-  max-width: 1900px;
-  background: #FFFFFF 0 0;
+  max-width: $desktop-width;
+  background: $white 0 0;
   margin: 0 auto;
   position: relative;
-  border: 0.5px solid $light-gray;
+  //border: 0.5px solid $light;
 }

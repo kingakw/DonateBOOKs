@@ -13,25 +13,25 @@ const Header = () => {
     };
 
         return (
-        <div className="header__container">
+        <div className="header">
             <nav className="header__nav">
-                <NavLink className="header__nav__el"  to="/Login" element={<Login/> } onClick={toggleClass} >
-                    Zaloguj
+                <NavLink className="nav__btn"  to="/Login" element={<Login/> } onClick={toggleClass} >
+                    LogIn
                 </NavLink>
-                <NavLink className="header__nav__el" to="/Register" element={<Register/>} onClick={toggleClass}>
-                    Załóż konto
+                <NavLink className="nav__btn" to="/Register" element={<Register/>} onClick={toggleClass}>
+                    Register
                 </NavLink>
             </nav>
 
             <ul className="header__menu">
                 <li>
-                    <NavLink className="header__menu__el"  to="/" element={<Header/>}> Start
+                    <NavLink className="menu__btns"  to="/" element={<Header/>}> Start
                     </NavLink>
                     </li>
-                <li> <Link to ="fourSteps" smooth={true} > O co chodzi? </Link> </li>
-                <li> <Link to ="about" smooth={true} > O nas </Link> </li>
-                <li> <Link to ="help" smooth={true} > Fundacja i organizacje </Link> </li>
-                <li> <Link to ="contact" smooth={true} > Kontakt </Link> </li>
+                <li> <Link to ="fourSteps" smooth={true} > What we do </Link> </li>
+                <li> <Link to ="about" smooth={true} > About Us </Link> </li>
+                <li> <Link to ="help" smooth={true} > Libraries & other places </Link> </li>
+                <li> <Link to ="contact" smooth={true} > Contact </Link> </li>
             </ul>
         </div>
     );

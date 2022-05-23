@@ -1,7 +1,7 @@
 import React from 'react';
 
-import HomeSection1 from "./HomeSection1";
-import HomeThreeColumns from "./HomeThreeColums";
+import HomeSection from "./HomeSection";
+import HomeFourStepsColumns from "./HomeFourStepsColums";
 import HomeFourSteps from "./HomeFourSteps";
 import HomeAboutUs from "./HomeAboutUs";
 import HomeHelp from "./HomeHelp";
@@ -11,8 +11,8 @@ import HomeFooter from "./HomeFooter";
 const Home = () => {
     return (
         <div>
-            <HomeSection1/>
-            <HomeThreeColumns/>
+            <HomeSection/>
+            <HomeFourStepsColumns/>
             <HomeFourSteps/>
             <HomeAboutUs/>
             <HomeHelp/>

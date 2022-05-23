@@ -5,7 +5,7 @@
   margin: 0 auto;
   position: relative;
   background: #FFFFFF 0 0;
-  border: 0.5px solid $light-gray;
+  border: 0.5px solid $light;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +33,7 @@
       flex-direction: column;
 
       .regContainer__grey {
-        background: $light-gray;
+        background: $light;
         height: 328px;
         width: 385px;
         display: flex;
@@ -87,7 +87,7 @@
 
         &:hover {
           text-decoration-line: none;
-          outline:  0.75px solid $yellow;
+          outline:  0.75px solid $highlight;
         }
       }
     }

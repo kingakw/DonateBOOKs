@@ -1,8 +1,8 @@
-.aboutUs__container {
+.container__aboutUs {
   width: 100%;
   height: 935px;
   display: flex;
-  background-color: $light-gray;
+  background-color: $light;
 
   .aboutUs__info {
     width: 50%;
@@ -26,18 +26,11 @@
     }
 
     .aboutUs__info__text2{
-      font-size: $base-font-size*1.875;
-      line-height: $base-font-size*3.375;
+      margin: 30px;
+      font-size: $base-font-size*1.75;
+      line-height: $base-font-size*3;
       letter-spacing: -0.6px;
       text-align: center;
-    }
-    .aboutUs__signature{
-      width: 210px;
-      height: 149px;
-      align-self: flex-end;
-      margin-right: 150px;
-
-
     }
   }
 
@@ -47,7 +40,7 @@
     background-image: url("../../assets/People.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    opacity: 0.85;
   }
-
 
 }

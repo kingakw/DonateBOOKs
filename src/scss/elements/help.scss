@@ -1,12 +1,12 @@
-.helpContainer {
+.container__help {
   width: 100%;
-  height: 1012px;
+  height: 965px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
 
-  .helpContainer__title {
+  .help__title {
     font-family: $font-base;
     font-size: $title-font-size;
     line-height: $title-line-height;
@@ -14,24 +14,24 @@
     margin-top: 70px;
   }
 
-  .helpContainer__decor {
+  .help__decor {
     height: 33px;
     width: 253px;
     display: block;
   }
 
-  .helpMenu {
+  .help_menu {
     margin-top: 62px;
     display: flex;
     cursor: pointer;
 
-    .helpMenu__btn {
+    .menu__btn {
       width: 208px;
       height: 79px;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0 50px;
+      margin: 0 30px;
 
       p {
         font-size: $base-font-size*1.5;
@@ -50,7 +50,7 @@
     }
   }
 
-  .helpMenu__places .helpMenu__text {
+  .help__places .places__text {
     display: none;
 
     &.active {
@@ -64,46 +64,46 @@
     }
   }
 
-  .helpMenu__list {
+  .help__list {
     width: 1344px;
     font-family: $font-alt;
 
-    .helpMenu__list__place {
+    .list__place {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       border-bottom: 1px solid $black;
 
-      .helpMenu__list__place__container {
+      .place__info {
         width: 650px;
         height: 90px;
-        margin-bottom: 32px;
+        margin-bottom: $base-font-size;
 
-        .helpMenu__list__place__text1 {
-          font-size: $base-font-size * 1.625;
+        .info__text1 {
+          font-size: $base-font-size * 1.5;
           margin-bottom: 6px;
-          margin-top: 32px;
+          margin-top: $base-font-size;
         }
 
-        .helpMenu__list__place__text2 {
+        .info__text2 {
           font-size: $base-font-size*1.125;
           line-height: $base-font-size*1.375;
           margin-top: 0;
         }
       }
 
-      .helpMenu__list__place__text3 {
+      .place__text {
         align-self: center;
       }
     }
-    div.helpMenu__list__place:nth-of-type(3),
-   div.helpMenu__list__place:last-of-type{
+    div.list__place:nth-of-type(3),
+   div.list__place:last-of-type{
       border-bottom: none;
     }
 
   }
 
-  .helpMenu__pg {
+  .help__page {
     position: absolute;
     display: none;
     bottom: 60px;

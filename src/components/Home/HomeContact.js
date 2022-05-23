@@ -5,7 +5,7 @@ const HomeContact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [msg, setMsg] = useState("");
-    const [sucess, setSucess] = useState("");
+    const [success, setSuccess] = useState("");
     const [postData, setPostData] = useState(null);
     const [nameErr, setNameErr] = useState({});
     const [emailErr, setEmailErr] = useState({});
@@ -36,7 +36,7 @@ const HomeContact = () => {
                 headers: {"Content-Type": "application/json"}
             });
             if (response.ok) {
-                setSucess("Wiadomość została wysłana! Wkrótce się skontaktujmy");
+                setSuccess("Your message was sent! soon we will contact you");
             }}) ()
         }, [postData]);
 
@@ -49,48 +49,48 @@ const HomeContact = () => {
         let isValid = true;
 
         if(name.indexOf(' ') >= 0){
-            nameErr.nameSpace = "Podane imię jest nieprawidłowe!";
+            nameErr.nameSpace = "Given name is incorrect!";
             isValid = false;
         }
         if(name.length < 3) {
-            nameErr.nameShort = "Imię musi mieć conajmniej 3 znaki!";
+            nameErr.nameShort = "Name should have at least 3 characters!";
             isValid = false;
         }
 
         if(msg.length < 120){
-            msgErr.msgShort = "Wiadomość musi mieć conajmniej 120 znaków!";
+            msgErr.msgShort = "The message should have at least 120 characters!";
             isValid = false;
         }
 
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if(!re.test(email)) {
-            emailErr.msgErr = "Podany email jest nieprawidłowy!!";
+            emailErr.msgErr = "Given email is incorrect!!";
             isValid = false;
         }
 
         setNameErr(nameErr);
         setMsgErr(msgErr);
         setEmailErr(emailErr);
-        setSucess("")
+        setSuccess("")
         return isValid;
     }
 
     return (
-        <div className="contactContainer" name="contact">
-            <div className="contactContainer__whiteBck">
+        <div className="container__contact" name="contact">
+            <div className="contact__whiteBck">
             </div>
 
-            <div className="contact__bck">
-                <p className="contact__bck__title"> Skontaktuj się z nami </p>
-                <div className="contact__bck__decor">
+            <div className="contact__info">
+                <p className="info__title"> Contact us </p>
+                <div className="info__decor">
                     <img src={Decoration} alt="decoration"/>
                 </div>
-                <div className="success"> {sucess} </div>
+                <div className="success"> {success} </div>
 
                 <form onSubmit={handleSubmit}>
-                    <div className="contact__bck__box">
-                    <label className="contact__bck__name">
-                        Wpisz swoje imię
+                    <div className="info__box">
+                    <label className="info__name">
+                        Your name
                         <input type="text"
                                name="name"
                                placeholder='Anna'
@@ -101,8 +101,8 @@ const HomeContact = () => {
                             return <div className="error" key={key}> {nameErr[key]} </div>
                             })}
                     </label>
-                    <label className="contact__bck__name">
-                        Wpisz swój email
+                    <label className="info__name">
+                        Your email
                         <input type="text"
                                name="email"
                                placeholder='abc@xyz.pl'
@@ -114,8 +114,8 @@ const HomeContact = () => {
                         })}
                     </label>
                     </div>
-                    <label className="contact__bck__msg">
-                        Wpisz swoją wiadomość
+                    <label className="info__msg">
+                        Your message
                         <textarea value={msg}
                                   placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
                                   onChange={(e) => {setMsg(e.target.value)}}
@@ -124,8 +124,8 @@ const HomeContact = () => {
                             return <div className="error" key={key}> {msgErr[key]} </div>
                         })}
                     </label>
-                    <div className="contact__bck__btn">
-                        <button type="submit"> Wyślij  </button>
+                    <div className="info__btn">
+                        <button type="submit"> Submit  </button>
                     </div>
                 </form>
 

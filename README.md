@@ -1,5 +1,5 @@
 # Project description
-Platform that help give away staff you do not need anymore to those who can use them
+Platform that help you give away books you do not need anymore to child-care homes, school and library.
 
 # Technologies used
 React, Material UI, Sass, HTML , Firebase;
