@@ -20,56 +20,17 @@
       border-radius: 5px;
 
       &.active {
-        outline: 0.75px solid $darkgray;
-      }
-
-      &:hover {
-        font-weight: bolder;
         color: $highlight;
-        background-color: $darkgray;
-
-      }
-    }
-  }
-
-  .header__menu {
-    margin-top: 20px;
-    display: flex;
-    cursor: pointer;
-    margin-right: 142px;
-    justify-content: flex-end;
-
-
-    .menu__btns{
-      color: $black;
-      text-decoration: none;
-
-      &:hover {
-        font-weight: bolder;
-        color: $light;
-        background-color: $darkgray;
-      }
-
-      &.active {
-        color: $highlight;
-        font-weight: bolder;
-      }
-    }
-
-    li {
-      font-size: $base-font-size*1.125;
-      margin-left: $base-font-size*1.5;
-      list-style: none;
-      text-align: left;
-      padding: 5px 20px;
-      border-radius: 5px;
-      transition: color .3s, background-color .3s;
-
-      &:hover {
         font-weight: bold;
-        color: $light;
+      }
+
+      &:hover {
+        font-weight: bolder;
+        color: $highlight;
         background-color: $darkgray;
+
       }
     }
   }
+
 }

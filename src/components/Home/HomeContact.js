@@ -15,7 +15,7 @@ const HomeContact = () => {
         e.preventDefault();
         const isValid = formValidation();
 
-        if(isValid){
+        if (isValid) {
             setName("");
             setMsg("");
             setEmail("");
@@ -28,42 +28,43 @@ const HomeContact = () => {
         }
     };
 
-    useEffect( () => {
+    useEffect(() => {
         (async () => {
-        const response = await fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
+            const response = await fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
                 method: "POST",
+                cache: "no-cache",
                 body: JSON.stringify(postData),
                 headers: {"Content-Type": "application/json"}
             });
             if (response.ok) {
                 setSuccess("Your message was sent! soon we will contact you");
-            }}) ()
-        }, [postData]);
+            }
 
-    /// wyciagnac do helpers to co sie powtarza w walidacji Login / Register / HomeContact
+        })()
+    }, [postData]);
 
-    const formValidation = () =>{
+    const formValidation = () => {
         const nameErr = {};
         const msgErr = {};
-        const emailErr= {};
+        const emailErr = {};
         let isValid = true;
 
-        if(name.indexOf(' ') >= 0){
+        if (name.indexOf(' ') >= 0) {
             nameErr.nameSpace = "Given name is incorrect!";
             isValid = false;
         }
-        if(name.length < 3) {
+        if (name.length < 3) {
             nameErr.nameShort = "Name should have at least 3 characters!";
             isValid = false;
         }
 
-        if(msg.length < 120){
+        if (msg.length < 120) {
             msgErr.msgShort = "The message should have at least 120 characters!";
             isValid = false;
         }
 
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if(!re.test(email)) {
+        if (!re.test(email)) {
             emailErr.msgErr = "Given email is incorrect!!";
             isValid = false;
         }
@@ -89,43 +90,49 @@ const HomeContact = () => {
 
                 <form onSubmit={handleSubmit}>
                     <div className="info__box">
-                    <label className="info__name">
-                        Your name
-                        <input type="text"
-                               name="name"
-                               placeholder='Anna'
-                               value={name}
-                               onChange={(e) => {setName(e.target.value)}}
-                        />
-                      {Object.keys(nameErr).map((key)=>{
-                            return <div className="error" key={key}> {nameErr[key]} </div>
+                        <label className="info__name">
+                            Your name
+                            <input type="text"
+                                   name="name"
+                                   placeholder='Anna'
+                                   value={name}
+                                   onChange={(e) => {
+                                       setName(e.target.value)
+                                   }}
+                            />
+                            {Object.keys(nameErr).map((key) => {
+                                return <div className="error" key={key}> {nameErr[key]} </div>
                             })}
-                    </label>
-                    <label className="info__name">
-                        Your email
-                        <input type="text"
-                               name="email"
-                               placeholder='abc@xyz.pl'
-                               value={email}
-                               onChange={(e) => {setEmail(e.target.value)}}
-                        />
-                        {Object.keys(emailErr).map((key)=>{
-                            return <div className="error" key={key} > {emailErr[key]} </div>
-                        })}
-                    </label>
+                        </label>
+                        <label className="info__name">
+                            Your email
+                            <input type="text"
+                                   name="email"
+                                   placeholder='abc@xyz.pl'
+                                   value={email}
+                                   onChange={(e) => {
+                                       setEmail(e.target.value)
+                                   }}
+                            />
+                            {Object.keys(emailErr).map((key) => {
+                                return <div className="error" key={key}> {emailErr[key]} </div>
+                            })}
+                        </label>
                     </div>
                     <label className="info__msg">
                         Your message
                         <textarea value={msg}
                                   placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                                  onChange={(e) => {setMsg(e.target.value)}}
+                                  onChange={(e) => {
+                                      setMsg(e.target.value)
+                                  }}
                         />
-                        {Object.keys(msgErr).map((key)=>{
+                        {Object.keys(msgErr).map((key) => {
                             return <div className="error" key={key}> {msgErr[key]} </div>
                         })}
                     </label>
                     <div className="info__btn">
-                        <button type="submit"> Submit  </button>
+                        <button type="submit"> Submit</button>
                     </div>
                 </form>
 

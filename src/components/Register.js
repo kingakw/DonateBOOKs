@@ -23,8 +23,6 @@ const Register = () => {
         }
     }
 
-    /// wyciagnac do helpers to co sie powtarza w walidacji Login / Register / HomeContact
-
     const regValidation = () => {
         const passwordErr = {};
         const passwordRepeatErr = {};
@@ -32,23 +30,23 @@ const Register = () => {
         let isValid = true;
 
         if (password.length < 6) {
-            passwordErr.nameShort = "Hasło musi mieć min. 6 znaków!";
+            passwordErr.nameShort = "Password is incorrect, it should have at least 6 characters!";
             isValid = false;
         }
 
         if (passwordRepeat !== password ) {
-            passwordRepeatErr.deferent = "Hasła są różne!";
+            passwordRepeatErr.deferent = "Password and confirm password do not match!";
             isValid = false;
         }
 
         if (passwordRepeat.length < 6 ) {
-            passwordRepeatErr.nameShort = "Hasło musi mieć min. 6 znaków!";
+            passwordRepeatErr.nameShort = "Password should have at least 6 characters!!";
             isValid = false;
         }
 
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!re.test(email)) {
-            emailErr.msgErr = "Podany email jest nieprawidłowy!!";
+            emailErr.msgErr = "Given email is incorrect!!";
             isValid = false;
         }
 
@@ -59,17 +57,17 @@ const Register = () => {
     }
 
     return (
-        <div className="regContainer">
-            <p className="regContainer__text"> Załóż konto </p>
-            <div className="regContainer__decor">
+        <div className="container__relog">
+            <p className="relog__text"> Register </p>
+            <div className="relog__decor">
                 <img src={Decoration} alt="decoration"/>
             </div>
 
-            <div className="regContainer__reg">
+            <div className="relog__info">
 
                 <form onSubmit={onSubmit}>
-                    <div className="regContainer__grey">
-                        <label className="regContainer__email">
+                    <div className="info__box">
+                        <label className="box__email">
                             Email
                             <input
                                 type="text"
@@ -83,8 +81,8 @@ const Register = () => {
                                 return <div className="error" key={key}> {emailErr[key]} </div>
                             })}
                         </label>
-                        <label className="regContainer__password">
-                            Hasło
+                        <label className="box__password">
+                            Password
                             <input
                                 type="password"
                                 name="password"
@@ -97,8 +95,8 @@ const Register = () => {
                                 return <div className="error" key={key}> {passwordErr[key]} </div>
                             })}
                         </label>
-                        <label className="regContainer__password">
-                            Powtórz hasło
+                        <label className="box__password">
+                            Repeat password
                             <input
                                 type="password"
                                 name="password"
@@ -113,12 +111,12 @@ const Register = () => {
                         </label>
                     </div>
 
-                    <div className="regContainer__nav">
-                        <NavLink className="regContainer__nav__el" to="/Login" element={<Login/>}>
-                            Zaloguj się
+                    <div className="info__nav">
+                        <NavLink className="nav__btn1" to="/Login" element={<Login/>}>
+                            Log in
                         </NavLink>
-                        <div className="regContainer__btn">
-                            <button type="submit"> Załóż konto </button>
+                        <div className="nav__btn2">
+                            <button type="submit"> Register </button>
                         </div>
                     </div>
 

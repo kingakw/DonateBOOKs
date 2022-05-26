@@ -27,13 +27,13 @@ const Login = () => {
         let isValid = true;
 
         if (password.length < 6) {
-            passwordErr.nameShort = "Podane hasło jest za krótkie, musi mieć min. 6 znaków!";
+            passwordErr.nameShort = "Password is incorrect, it should have at least 6 characters!";
             isValid = false;
         }
 
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!re.test(email)) {
-            emailErr.msgErr = "Podany email jest nieprawidłowy!!";
+            emailErr.msgErr = "Email is incorrect. Try again.";
             isValid = false;
         }
 
@@ -43,17 +43,17 @@ const Login = () => {
     }
 
     return (
-        <div className="logContainer">
-            <p className="logContainer__text"> Zaloguj się </p>
-            <div className="logContainer__decor">
+        <div className="container__relog">
+            <p className="relog__text"> Login </p>
+            <div className="relog__decor">
                 <img src={Decoration} alt="decoration"/>
             </div>
 
-            <div className="logContainer__log">
+            <div className="relog__info">
 
                     <form onSubmit={onSubmit}>
-                        <div className="logContainer__grey">
-                        <label className="logContainer__email">
+                        <div className="info__box">
+                        <label className="box__email">
                             Email
                             <input
                                 type="text"
@@ -67,8 +67,8 @@ const Login = () => {
                                 return <div className="error" key={key}> {emailErr[key]} </div>
                             })}
                         </label>
-                        <label className="logContainer__password">
-                            Hasło
+                        <label className="box__password">
+                            Password
                             <input
                                 type="password"
                                 name="password"
@@ -83,12 +83,12 @@ const Login = () => {
                         </label>
                         </div>
 
-                <div className="logContainer__nav">
-                    <NavLink className="logContainer__nav__el" to="/Register" element={<Register/>}>
-                        Załóż konto
+                <div className="info__nav">
+                    <NavLink className="nav__btn1" to="/Register" element={<Register/>}>
+                        Register
                     </NavLink>
-                    <div className="logContainer__btn">
-                        <button type="submit"> Zaloguj się</button>
+                    <div className="nav__btn2">
+                        <button type="submit"> Log In</button>
                     </div>
                 </div>
 

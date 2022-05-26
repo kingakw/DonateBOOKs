@@ -1,4 +1,4 @@
-.regContainer {
+.container__relog {
   width: 100vw;
   max-width: 1900px;
   height: 100vh;
@@ -10,21 +10,22 @@
   flex-direction: column;
   align-items: center;
 
-  .regContainer__text {
-    margin-top: 246px;
+  .relog__text {
+    margin-top: 220px;
     font-size: $title-font-size;
     line-height: $title-line-height;
     letter-spacing: -0.8px;
+    margin-bottom: 0;
   }
 
-  .regContainer__decor {
-    margin-top: 25px;
-    height: 33px;
+  .relog__decor {
+    margin-top: $title-font-size;
     width: 253px;
-    margin-bottom: 60px;
+    height: 33px;
+    margin-bottom: 0;
   }
 
-  .regContainer__reg {
+  .relog__info {
     height: 418px;
     width: 385px;
 
@@ -32,16 +33,17 @@
       display: flex;
       flex-direction: column;
 
-      .regContainer__grey {
+      .info__box {
+        margin-top: $title-font-size*1.5;
         background: $light;
-        height: 328px;
+        height: 300px;
         width: 385px;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
 
-        .regContainer__email,
-        .regContainer__password {
+        .box__email,
+        .box__password {
           display: flex;
           flex-direction: column;
           margin: 0 67px;
@@ -56,48 +58,47 @@
       }
     }
   }
-  .regContainer__nav{
-    margin-top: 53px;
+
+  .info__nav {
+    margin-top: 50px;
     width: 504px;
     align-self: center;
     display: flex;
     justify-content: space-between;
 
-    .regContainer__nav__el {
+    .nav__btn1,
+    .nav__btn2 button {
+      border-radius: 5px;
+      background: none;
+      padding: 5px 30px;
       color: $black;
-      font-size: $base-font-size*1.125;
-      line-height: $base-font-size*2;
+      transition: color .3s, background-color .3s;
 
       &:hover {
         text-decoration-line: none;
-        outline: 0.75px solid $gray;
-        outline-offset: $base-font-size*0.5;
+        outline: 0.75px solid $darkgray;
+        color: $highlight;
+        background-color: $darkgray;
       }
     }
 
-    .regContainer__btn{
-      font-size: $base-font-size*1.125;
-      line-height: $base-font-size*2;
+    .nav__btn2 button {
+      border-style: none;
+      outline-offset: 0;
+      outline: 0.75px solid $gray;
+      padding: 8px 30px;
 
-      button {
-        border-style: none;
-        background: none;
-        outline: 0.75px solid $gray;
-        outline-offset: $base-font-size*0.75;
-
-        &:hover {
-          text-decoration-line: none;
-          outline:  0.75px solid $highlight;
-        }
+      &:hover {
+        font-weight: bold;
       }
     }
   }
+
   .error {
     margin-top: $base-font-size *0.5;
-    font-size: $base-font-size *0.9;
+    font-size: $base-font-size *0.8;
     line-height: $base-font-size;
     font-weight: bold;
     color: red;
   }
 }
-

@@ -6,14 +6,14 @@ import Home from "./Home/Home";
 const Logout = () => {
     return (
         <div className="logoutContainer">
-            <p className="logoutContainer__text"> Wylogowanie nastąpiło <br/> pomyślnie! </p>
+            <p className="logoutContainer__text"> You logout successfully </p>
             <div className="logoutContainer__decor">
                 <img src={Decoration} alt="decoration"/>
             </div>
 
             <div className="logoutContainer__nav">
                 <NavLink className="logoutContainer__nav__el" to="/" element={<Home/>}>
-                    Strona główna
+                    Home
                 </NavLink>
             </div>
         </div>
