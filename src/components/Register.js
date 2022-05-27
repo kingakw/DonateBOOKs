@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import Decoration from "../assets/Decoration.svg";
 import {NavLink} from "react-router-dom";
 import Login from "./Login";
+import passwordCheck from "./helpers/passwordCheck";
+import mailCheck from "./helpers/mailCheck";
 
 
 const Register = () => {
@@ -24,35 +26,24 @@ const Register = () => {
     }
 
     const regValidation = () => {
-        const passwordErr = {};
         const passwordRepeatErr = {};
-        const emailErr = {};
         let isValid = true;
 
-        if (password.length < 6) {
-            passwordErr.nameShort = "Password is incorrect, it should have at least 6 characters!";
-            isValid = false;
-        }
+        const passwordValidation = passwordCheck({password});
+        isValid = !passwordValidation.msg;
 
-        if (passwordRepeat !== password ) {
+        if (passwordRepeat !== password) {
             passwordRepeatErr.deferent = "Password and confirm password do not match!";
             isValid = false;
         }
 
-        if (passwordRepeat.length < 6 ) {
-            passwordRepeatErr.nameShort = "Password should have at least 6 characters!!";
-            isValid = false;
-        }
+        const mailValidation = mailCheck({email});
+        isValid = !mailValidation.msg;
 
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!re.test(email)) {
-            emailErr.msgErr = "Given email is incorrect!!";
-            isValid = false;
-        }
 
-        setPasswordErr(passwordErr);
+        setPasswordErr(passwordValidation);
         setPasswordRepeatErr(passwordRepeatErr);
-        setEmailErr(emailErr);
+        setEmailErr(mailValidation);
         return isValid;
     }
 
@@ -116,7 +107,7 @@ const Register = () => {
                             Log in
                         </NavLink>
                         <div className="nav__btn2">
-                            <button type="submit"> Register </button>
+                            <button type="submit"> Register</button>
                         </div>
                     </div>
 

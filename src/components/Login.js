@@ -30,8 +30,8 @@ const Login = () => {
         const mailValidation = mailCheck({email});
         isValid = !mailValidation.msg;
 
-        setPasswordErr(passwordErr);
-        setEmailErr(emailErr);
+        setPasswordErr(passwordValidation);
+        setEmailErr(mailValidation);
         return isValid;
     }
 

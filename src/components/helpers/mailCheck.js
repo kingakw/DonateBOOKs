@@ -1,7 +1,7 @@
 
 const mailCheck = ({email}) => {
     const emailErr = {};
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const re =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (!re.test(email)) {
         emailErr.msg = "Given email is incorrect!!";
     }
@@ -9,3 +9,5 @@ const mailCheck = ({email}) => {
 }
 
 export default mailCheck;
+
+

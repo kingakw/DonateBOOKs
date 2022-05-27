@@ -30,7 +30,6 @@ const HomeContact = () => {
 
 
     useEffect(() => {
-        console.log(postData);
         if (postData !== null) {
             (async () => {
                 const response = await fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
@@ -42,7 +41,6 @@ const HomeContact = () => {
                 if (response.ok) {
                     setSuccess("Your message was sent! soon we will contact you");
                 }
-
             })()}
     }, [postData]);
 
