@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Decoration from "../../assets/Decoration.svg";
+import mailCheck from "../helpers/mailCheck.js";
 
 const HomeContact = () => {
     const [name, setName] = useState("");
@@ -19,7 +20,6 @@ const HomeContact = () => {
             setName("");
             setMsg("");
             setEmail("");
-
             setPostData({
                 name: name,
                 email: email,
@@ -28,25 +28,27 @@ const HomeContact = () => {
         }
     };
 
-    useEffect(() => {
-        (async () => {
-            const response = await fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
-                method: "POST",
-                cache: "no-cache",
-                body: JSON.stringify(postData),
-                headers: {"Content-Type": "application/json"}
-            });
-            if (response.ok) {
-                setSuccess("Your message was sent! soon we will contact you");
-            }
 
-        })()
+    useEffect(() => {
+        console.log(postData);
+        if (postData !== null) {
+            (async () => {
+                const response = await fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
+                    method: "POST",
+                    cache: "no-cache",
+                    body: JSON.stringify(postData),
+                    headers: {"Content-Type": "application/json"}
+                });
+                if (response.ok) {
+                    setSuccess("Your message was sent! soon we will contact you");
+                }
+
+            })()}
     }, [postData]);
 
     const formValidation = () => {
         const nameErr = {};
         const msgErr = {};
-        const emailErr = {};
         let isValid = true;
 
         if (name.indexOf(' ') >= 0) {
@@ -63,15 +65,12 @@ const HomeContact = () => {
             isValid = false;
         }
 
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!re.test(email)) {
-            emailErr.msgErr = "Given email is incorrect!!";
-            isValid = false;
-        }
+        const mailValidation = mailCheck({email});
+        isValid = !mailValidation.msg;
 
         setNameErr(nameErr);
         setMsgErr(msgErr);
-        setEmailErr(emailErr);
+        setEmailErr(mailValidation);
         setSuccess("")
         return isValid;
     }

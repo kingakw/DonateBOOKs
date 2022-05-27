@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import Decoration from "../assets/Decoration.svg"
 import {NavLink} from "react-router-dom";
 import Register from "./Register";
+import mailCheck from "./helpers/mailCheck";
+import passwordCheck from "./helpers/passwordCheck";
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -19,23 +21,14 @@ const Login = () => {
          }
     }
 
- /// wyciagnac do helpers to co sie powtarza w walidacji Login / Register / HomeContact
-
     const logValidation = () => {
-        const passwordErr = {};
-        const emailErr = {};
         let isValid = true;
 
-        if (password.length < 6) {
-            passwordErr.nameShort = "Password is incorrect, it should have at least 6 characters!";
-            isValid = false;
-        }
+        const passwordValidation = passwordCheck({password});
+        isValid = !passwordValidation.msg;
 
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!re.test(email)) {
-            emailErr.msgErr = "Email is incorrect. Try again.";
-            isValid = false;
-        }
+        const mailValidation = mailCheck({email});
+        isValid = !mailValidation.msg;
 
         setPasswordErr(passwordErr);
         setEmailErr(emailErr);
