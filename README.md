@@ -4,6 +4,7 @@ You can donate books to the wild selection of libraries, child-care homes, schoo
 Your books can enrich the lives of others readers.
 
 This project was based on similar project made during PortfolioLab as part of the CodersLab Front-end course.
+On landing page press menu to navigate (smooth scrolling).
 
 # ▶️ DEMO
 
@@ -23,8 +24,8 @@ This project was based on similar project made during PortfolioLab as part of th
 * Progressive Web Application (PWA)
 * Language version: ENG <sub> English is not my native language.
 * Pagination for institutions grouped in lists
-* Contact form
-* Authorization dialogs for: log in, register
+* Contact form with validation logic
+* Authorization dialogs for: log in, register with validation logic
 * Smooth scrolling and animations
 
 # 🆔 LICENSE
