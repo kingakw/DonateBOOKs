@@ -8,6 +8,10 @@ On landing page press menu to navigate (smooth scrolling).
 
 # ▶️ DEMO
 
+```bash
+https://books-fb758.web.app
+```
+
 ![BooksScreen](public/BooksScreen.png)
 
 # 📓 TECHNOLOGIES 
