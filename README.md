@@ -7,6 +7,7 @@ This project was based on similar project made during PortfolioLab as part of th
 On landing page press menu to navigate (smooth scrolling).
 
 # ▶️ DEMO
+For demo click below:
 
 ```bash
 https://books-fb758.web.app
