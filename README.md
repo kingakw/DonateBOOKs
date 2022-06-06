@@ -8,7 +8,6 @@ On landing page press menu to navigate (smooth scrolling).
 
 # ▶️ DEMO
 For demo click below:
-
 ```bash
 https://books-fb758.web.app
 ```
