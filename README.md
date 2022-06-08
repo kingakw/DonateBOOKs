@@ -7,7 +7,7 @@ This project was based on similar project made during PortfolioLab as part of th
 On landing page press menu to navigate (smooth scrolling).
 
 # ▶️ DEMO
-For demo click below:
+For demo click here:
 https://books-fb758.web.app
 
 ![BooksScreen](public/BooksScreen.png)
@@ -16,6 +16,7 @@ https://books-fb758.web.app
 * React.js with Hooks, 
 * React Router Dom;
 * React Scroll;
+* React Context API
 * Node package manager;
 * Sass, 
 * HTML, 
